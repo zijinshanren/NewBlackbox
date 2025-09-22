@@ -57,28 +57,28 @@ jobs:
           echo "release_apk_path=$RELEASE_APK" >> $GITHUB_OUTPUT
           
       - name: Upload Debug APKs as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debug-apks
           path: ./app/build/outputs/apk/debug/*.apk
           retention-days: 30
 
       - name: Upload Release APKs as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-apks
           path: ./app/build/outputs/apk/release/*.apk
           retention-days: 30
 
       - name: Upload Debug AARs as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: debug-aars
           path: ./Bcore/build/outputs/aar/*debug.aar
           retention-days: 30
 
       - name: Upload Release AARs as Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-aars
           path: ./Bcore/build/outputs/aar/*release.aar
